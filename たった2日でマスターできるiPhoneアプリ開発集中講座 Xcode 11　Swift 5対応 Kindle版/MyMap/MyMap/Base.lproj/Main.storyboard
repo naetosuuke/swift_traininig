@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BFH-Ds-ZJs">
+                                <rect key="frame" x="0.0" y="59" width="393" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1ag-Pm-ekM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="eha-As-30y"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="rTp-L5-4mY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-Pl-x83">
+                                <rect key="frame" x="0.0" y="93" width="393" height="725"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BFH-Ds-ZJs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8X2-yb-auz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BFH-Ds-ZJs" secondAttribute="trailing" id="9uC-zY-16g"/>
+                            <constraint firstItem="BFH-Ds-ZJs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IwV-Os-g0v"/>
+                            <constraint firstItem="ceG-Pl-x83" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KFo-u8-h5m"/>
+                            <constraint firstItem="BFH-Ds-ZJs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PlW-1a-om3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BFH-Ds-ZJs" secondAttribute="trailing" id="QZB-fn-5vb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ceG-Pl-x83" secondAttribute="trailing" id="W2A-uI-6ts"/>
+                            <constraint firstItem="ceG-Pl-x83" firstAttribute="top" secondItem="BFH-Ds-ZJs" secondAttribute="bottom" id="XqB-ar-9Q2"/>
+                            <constraint firstItem="BFH-Ds-ZJs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f7y-Eb-fo7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ceG-Pl-x83" secondAttribute="bottom" id="qOI-uH-p5r"/>
+                            <constraint firstItem="BFH-Ds-ZJs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qaA-wl-lgi"/>
+                            <constraint firstItem="BFH-Ds-ZJs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yMI-40-6Lp"/>
+                            <constraint firstItem="BFH-Ds-ZJs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zN8-bH-ZFy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dispMap" destination="ceG-Pl-x83" id="CuJ-mX-gED"/>
+                        <outlet property="inputText" destination="BFH-Ds-ZJs" id="HkV-u3-wc5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
